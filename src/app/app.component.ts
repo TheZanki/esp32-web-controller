@@ -2,9 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: '<div class="rotate-phone"></div>\
+             <router-outlet></router-outlet>',
 })
 export class AppComponent {
-  title = 'esp32-web-controller';
 }

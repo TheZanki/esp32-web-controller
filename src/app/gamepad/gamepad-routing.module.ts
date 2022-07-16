@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GamepadComponent } from './gamepad.component';
 
 const routes: Routes = [ 
   {
     path: '',
-    loadChildren: () => import('./gamepad/gamepad.module').then(m => m.GamepadModule)
+    component: GamepadComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class GamepadRoutingModule { }
